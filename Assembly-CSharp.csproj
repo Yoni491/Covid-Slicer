@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FruitManager.cs" />
+    <Compile Include="Assets\Scripts\FruitScript.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/yonie/Covid Slicer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
