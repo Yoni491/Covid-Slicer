@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FruitScript : MonoBehaviour
 {
+    //[SerializeField] GameObject ScoreboardPopUp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,4 +40,10 @@ public class FruitScript : MonoBehaviour
          InGamePanel.updateScore(1);
          Destroy(gameObject);
      }
+
+     //void LoseGame()
+     //{
+     //     ScoreScript.AddScore(InGamePanel.score);
+     //     ScoreboardPopUp.SetActive(true);
+     //}
 }
