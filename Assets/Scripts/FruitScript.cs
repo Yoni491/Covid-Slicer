@@ -35,7 +35,7 @@ public class FruitScript : MonoBehaviour
           //if (otherCollisionSpeed > playerCollisionSpeed)
           //{
          //}
-         ScoreScript.updateScore(1);
+         InGamePanel.updateScore(1);
          Destroy(gameObject);
      }
 }

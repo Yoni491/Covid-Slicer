@@ -256,3 +256,12 @@ C:\Users\yonie\Covid Slicer\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.c
 C:\Users\yonie\Covid Slicer\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\yonie\Covid Slicer\obj\Debug\Assembly-CSharp.dll
 C:\Users\yonie\Covid Slicer\obj\Debug\Assembly-CSharp.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.Timeline.Editor.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.VSCode.Editor.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\UnityEngine.UI.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.Timeline.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.Rider.Editor.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\Unity.TextMeshPro.pdb
+C:\Users\yonie\Covid Slicer\Temp\bin\Debug\UnityEditor.UI.pdb
