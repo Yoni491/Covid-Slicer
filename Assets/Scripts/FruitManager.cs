@@ -5,17 +5,15 @@ using UnityEngine;
 public class FruitManager : MonoBehaviour
 {
     [SerializeField]
-    Transform []fruits;
-    float timer = 0;
+    Transform []fruits = null;
+     float timer = 0;
     float timeToEject;
     int randomFruitIndex;
-    // Start is called before the first frame update
+
     void Start()
     {
         timeToEject = UnityEngine.Random.Range(2, 3);
     }
-
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -27,9 +25,7 @@ public class FruitManager : MonoBehaviour
             Transform fruit;
             fruit = LaunchFruit();
         }
-
     }
-
     private Transform LaunchFruit()
     {
         Transform fruit;

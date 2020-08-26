@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class InGamePanel : MonoBehaviour
 {
-    [SerializeField]
-    Text ScoreText;
-    static Text ScoreText2;
+    [SerializeField] Text ScoreText = null;
+     static Text ScoreText2;
     public static int score;
 
     public void ReturnToMainMenu()
