@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2509cd1b1e4f14b48ac04996e0a869e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 1
 --- !u!4 &959267801
 Transform:
   m_ObjectHideFlags: 0

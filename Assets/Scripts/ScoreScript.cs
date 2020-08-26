@@ -12,18 +12,34 @@ public class ScoreScript : MonoBehaviour
      static Text s_Date;
      static int MaxScores = 5;
      static int ScoresAmount = 0;
-     static PlayerScore[] currentScores;
+     static PlayerScore[] currentScores = new PlayerScore[MaxScores];
 
-     private void Start()
-     {
-          currentScores = new PlayerScore[MaxScores];
-          s_Score = Scores;
-          s_Date = Dates;
-     }
+    private void Start()
+    {
+        s_Score = Scores;
+        s_Date = Dates;
+    }
+
      public static void AddScore(int i_Score) // ADD NEW SCORE TO LEADERBOARDS
      {
-          PlayerScore NewScore = new PlayerScore(i_Score);
-          UpdateLeaderboard();
+        PlayerScore NewScore = new PlayerScore(i_Score);
+        for (int i = 0; i < 5; i++)
+        {
+            if (i >= ScoresAmount)
+            {
+                currentScores[i] = NewScore;
+                ScoresAmount++;
+                break;
+            }
+
+            if (i_Score > currentScores[i].m_Score)
+            {
+                PlayerScore temp = currentScores[i];
+                currentScores[i] = NewScore;
+                NewScore = temp;
+            }
+        }
+        //UpdateLeaderboard();
      }
 
      static void UpdateLeaderboard()
@@ -44,7 +60,7 @@ public class ScoreScript : MonoBehaviour
 public class PlayerScore
 {
      public int m_Score;
-     public string m_ScoreDate;
+     private string m_ScoreDate;
 
      public PlayerScore(int Score)
      {
