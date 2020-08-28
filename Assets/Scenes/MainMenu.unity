@@ -657,7 +657,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press left mouse to slice fruits, good luck!
+  m_Text: 'Move the mouse to slice fruits, avoid slicing bombs.
+
+    GOOD LUCK :D'
 --- !u!222 &673662510
 CanvasRenderer:
   m_ObjectHideFlags: 0
