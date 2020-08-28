@@ -16,7 +16,8 @@ public class PanelManager : MonoBehaviour
      }
      public void showScores()
      {
-          ScoreboardPopUp.SetActive(true);
+        ScoreScript.UpdateLeaderboard();
+        ScoreboardPopUp.SetActive(true);
      }
      public void HowToPlay()
      {

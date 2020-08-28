@@ -7,22 +7,38 @@ using UnityEngine.UI;
 public class InGamePanel : MonoBehaviour
 {
     [SerializeField] Text ScoreText = null;
-     static Text ScoreText2;
-    public static int score;
+    [SerializeField] Text StreakText = null;
+    static Text s_ScoreText;
+    static Text s_StreakText;
+    public static int score =0;
+    public static int streak = 0;
 
     public void ReturnToMainMenu()
-     {
-          SceneManager.LoadScene("MainMenu");
-     }
-    
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     private void Start()
     {
-        score = 0;
-        ScoreText2 = ScoreText;
+        s_ScoreText = ScoreText;
+        s_StreakText = StreakText;
     }
     public static void updateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        ScoreText2.text = "Score: " + score.ToString();
+        s_ScoreText.text = "Score: " + score.ToString();
+        updateStreak(1);
+    }
+    public static void updateStreak(int streakToAdd)
+    {
+        if(streakToAdd==0)
+        {
+            streak = 0;
+        }
+        else
+        {
+            streak += streakToAdd;
+        }
+        s_StreakText.text = "Streak: " + streak.ToString();
     }
 }

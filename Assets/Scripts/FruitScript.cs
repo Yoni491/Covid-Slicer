@@ -22,7 +22,7 @@ public class FruitScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-         InGamePanel.updateScore(1);
-         Destroy(gameObject);
+        InGamePanel.updateScore(1);
+        Destroy(gameObject);
      }
 }

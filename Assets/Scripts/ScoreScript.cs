@@ -10,7 +10,7 @@ public class ScoreScript : MonoBehaviour
      [SerializeField] Text Dates;
      static Text s_Score;
      static Text s_Date;
-     static int MaxScores = 5;
+     static int MaxScores = 10;
      static int ScoresAmount = 0;
      static PlayerScore[] currentScores = new PlayerScore[MaxScores];
 
@@ -23,7 +23,7 @@ public class ScoreScript : MonoBehaviour
      public static void AddScore(int i_Score) // ADD NEW SCORE TO LEADERBOARDS
      {
         PlayerScore NewScore = new PlayerScore(i_Score);
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < MaxScores; i++)
         {
             if (i >= ScoresAmount)
             {
@@ -39,18 +39,17 @@ public class ScoreScript : MonoBehaviour
                 NewScore = temp;
             }
         }
-        //UpdateLeaderboard();
      }
 
-     static void UpdateLeaderboard()
+     public static void UpdateLeaderboard()
      {
           string LeaderboardScore = "";
           string LeaderboardDate = "";
 
-          for(int i = 0; i < currentScores.Length; i++)
+          for(int i = 0; i < ScoresAmount; i++)
           {
                LeaderboardScore += (i + 1) + ". " + currentScores[i].m_Score + "\n";
-               LeaderboardDate += currentScores[i] + "\n";
+               LeaderboardDate += currentScores[i].ScoreDate + "\n";
           }
 
           s_Score.text = LeaderboardScore;
@@ -67,4 +66,6 @@ public class PlayerScore
           m_Score = Score;
           m_ScoreDate = System.DateTime.Today.ToShortDateString();
      }
+
+    public string ScoreDate { get => m_ScoreDate; set => m_ScoreDate = value; }
 }
