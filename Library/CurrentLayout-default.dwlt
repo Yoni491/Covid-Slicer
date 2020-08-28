@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 16667
+  controlID: 553
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 16814
+  controlID: 580
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 344}
   m_MaxSize: {x: 4004, y: 8044}
   vertical: 1
-  controlID: 16730
+  controlID: 488
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,9 +442,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.7394955, y: 2.3274326, z: -0.843153}
+    m_Target: {x: 2.0334957, y: 0.9995377, z: -1.0612652}
     speed: 2
-    m_Value: {x: 1.7394955, y: 2.3274326, z: -0.843153}
+    m_Value: {x: 2.0334957, y: 0.9995377, z: -1.0612652}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -473,13 +473,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.102724425, y: 0.30119464, z: -0.032656107, w: 0.94745165}
+    m_Target: {x: 0.05284469, y: 0.7203071, z: -0.055211276, w: 0.6894314}
     speed: 2
-    m_Value: {x: -0.10272443, y: -0.30119464, z: 0.032656107, w: -0.9474517}
+    m_Value: {x: 0.052844685, y: 0.7203071, z: -0.055211276, w: 0.68943137}
   m_Size:
-    m_Target: 3.085668
+    m_Target: 4.0988827
     speed: 2
-    m_Value: 3.085668
+    m_Value: 4.0988827
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -624,9 +624,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3c82ffff
-      m_LastClickedID: -32196
-      m_ExpandedIDs: 8c78ffff2cfbffff30fbffff76fbffffba310000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -715,20 +715,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TextMesh Pro/Resources/Fonts & Materials
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/TextMesh Pro/Resources/Fonts & Materials
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\yonie\Covid Slicer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c82f0000
-    m_LastClickedID: 12232
-    m_ExpandedIDs: 00000000002d0000922d0000ba2d0000cc2d0000d82e0000682f0000d02f0000
+    m_SelectedIDs: b2300000
+    m_LastClickedID: 12466
+    m_ExpandedIDs: 00000000002d0000ba2d0000cc2d0000d82e0000d02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -756,7 +756,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000002d0000922d0000ba2d0000cc2d0000d82e0000682f0000d02f0000
+    m_ExpandedIDs: 00000000002d0000ba2d0000cc2d0000d82e0000d02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
