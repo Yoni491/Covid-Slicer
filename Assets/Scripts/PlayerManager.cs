@@ -25,10 +25,5 @@ public class PlayerManager : MonoBehaviour
         xRotate += Input.GetAxis("Mouse Y") * RotationSensitivity * Time.deltaTime;
         xRotate = Mathf.Clamp(xRotate, minAngleY, maxAngleY);
         transform.eulerAngles = new Vector3(0.0f, yRotate, xRotate);
-        //if (Input.GetMouseButtonDown(0))
-        //{
-
-        //}
-
     }
 }

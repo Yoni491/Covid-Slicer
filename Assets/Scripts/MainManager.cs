@@ -19,7 +19,7 @@ public class MainManager : MonoBehaviour
     public static void LoseLife(int Amount)
     {
         s_Life -= Amount;
-        Destroy(s_hearts[s_Life]);
+        s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
         InGamePanel.updateStreak(0);
         if (s_Life <= 0)
         {
