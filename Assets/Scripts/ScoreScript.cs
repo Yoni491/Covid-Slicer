@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-     [SerializeField] Text Scores;
-     [SerializeField] Text Dates;
+     [SerializeField] Text Scores = null;
+     [SerializeField] Text Dates = null;
      static Text s_Score;
      static Text s_Date;
      static int MaxScores = 10;

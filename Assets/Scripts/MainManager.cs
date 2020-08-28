@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] hearts;
+    private GameObject[] hearts = null;
     [SerializeField]
     private int life = 0;
     static int s_Life;
@@ -19,12 +19,13 @@ public class MainManager : MonoBehaviour
     public static void LoseLife(int Amount)
     {
         s_Life -= Amount;
-        s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
         InGamePanel.updateStreak(0);
         if (s_Life <= 0)
         {
              LoseGame();
         }
+        else
+            s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
     }
     static void LoseGame()
     {

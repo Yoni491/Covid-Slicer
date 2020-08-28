@@ -7,13 +7,14 @@ using UnityEngine;
 public class FruitScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject fruitHalf1;
+    private GameObject fruitHalf1 = null;
     [SerializeField]
-    private GameObject fruitHalf2;
+    private GameObject fruitHalf2 = null;
+    private new AudioSource audio;
     bool isSlashed = false;
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -28,6 +29,8 @@ public class FruitScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
+        audio.time = 1;
+        audio.Play();
         InGamePanel.updateScore(1);
         fruitHalf1.SetActive(true);
         fruitHalf2.SetActive(true);
