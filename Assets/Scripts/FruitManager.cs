@@ -31,19 +31,19 @@ public class FruitManager : MonoBehaviour
     {
         Transform fruit;
         Transform ejectedBomb;
-        numOfFruitToLaunch = UnityEngine.Random.Range(1, 3);
+        numOfFruitToLaunch = UnityEngine.Random.Range(2, 4);
         for (int i = 0; i < numOfFruitToLaunch; i++)
         {
             randomFruitIndex = UnityEngine.Random.Range(0, fruits.Length - 1);
             fruit = Instantiate(fruits[randomFruitIndex]);
             fruit.position = transform.position + new Vector3(0, 0, UnityEngine.Random.Range(-1.2f, 1.2f));
-            fruit.GetComponent<Rigidbody>().AddForce(new Vector3(0, UnityEngine.Random.Range(350, 450), 0));
+            fruit.GetComponent<Rigidbody>().AddForce(new Vector3(0, UnityEngine.Random.Range(350, 400), 0));
         }
-        if (UnityEngine.Random.Range(1, 4) < 1.5)
+        if (UnityEngine.Random.Range(1f, 4f) < 1.5f)
         {
             ejectedBomb = Instantiate(bomb);
             ejectedBomb.position = transform.position + new Vector3(0, 0, UnityEngine.Random.Range(-1.2f, 1.2f));
-            ejectedBomb.GetComponent<Rigidbody>().AddForce(new Vector3(0, UnityEngine.Random.Range(350, 450), 0));
+            ejectedBomb.GetComponent<Rigidbody>().AddForce(new Vector3(0, UnityEngine.Random.Range(350, 400), 0));
         }
     }
 }

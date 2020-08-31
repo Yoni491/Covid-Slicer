@@ -42,6 +42,6 @@ public class FruitScript : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
         isSlashed = true;
         GetComponent<MeshCollider>().enabled = false;
-        //Destroy(gameObject);
+        InGamePanel.addCombo(1);
     }
 }
