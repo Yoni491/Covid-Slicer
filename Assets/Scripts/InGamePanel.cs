@@ -16,8 +16,12 @@ public class InGamePanel : MonoBehaviour
     static GameObject s_ComboPanel;
     public static int score =0;
     public static int streak = 0;
+
     public static int combo = 0;
-    float timer = 0;
+    static float timer = 0;
+    static float lastFruitSliceTime =0;
+    static int comboStreak = 0;
+    static bool b_resetCombo=false;
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -29,6 +33,10 @@ public class InGamePanel : MonoBehaviour
         s_StreakText = StreakText;
         s_ComboText = ComboText;
         s_ComboPanel = ComboPanel;
+    }
+    private void Update()
+    {
+        timer += Time.deltaTime;
     }
     public static void updateScore(int scoreToAdd)
     {
@@ -52,14 +60,38 @@ public class InGamePanel : MonoBehaviour
     {
         if (comboToAdd == 0)
         {
-            combo = 0;
-            s_ComboPanel.SetActive(false);
+            resetCombo();
         }
         else
         {
-            s_ComboPanel.SetActive(true);
+            if (timer - lastFruitSliceTime < 0.35f || lastFruitSliceTime == 0)
+            {
+                lastFruitSliceTime = timer;
+                comboStreak++;
+            }
+            else
+            {
+                if(comboStreak<=1)
+                {
+                    resetCombo();
+                }
+                lastFruitSliceTime = timer;
+                comboStreak = 1;
+                
+            }
             combo += comboToAdd;
-            s_ComboText.text = comboToAdd.ToString();
+            if(combo>1)
+                s_ComboPanel.SetActive(true);
+            s_ComboText.text = combo.ToString();
         }
+    }
+    public static void resetCombo()
+    {
+        updateScore(combo*((combo/10) >2? combo / 10 : 2));
+        lastFruitSliceTime = 0;
+        timer = 0;
+        combo = 0;
+        s_ComboPanel.SetActive(false);
+        b_resetCombo = false;
     }
 }

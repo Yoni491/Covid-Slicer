@@ -44,4 +44,5 @@ public class FruitScript : MonoBehaviour
         GetComponent<MeshCollider>().enabled = false;
         InGamePanel.addCombo(1);
     }
+
 }

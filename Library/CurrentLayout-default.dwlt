@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 444}
-  m_MaxSize: {x: 22012, y: 10022}
+  m_MinSize: {x: 915, y: 444}
+  m_MaxSize: {x: 22010, y: 10022}
   vertical: 0
-  controlID: 35172
+  controlID: 8430
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 35151
+  controlID: 8333
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 507
     width: 843
     height: 440
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 344}
   m_MaxSize: {x: 4004, y: 8044}
   vertical: 1
-  controlID: 35173
+  controlID: 8376
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,9 +442,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.6761919, y: 2.05372, z: -0.02444698}
+    m_Target: {x: 96.54934, y: 12.087302, z: -101.49884}
     speed: 2
-    m_Value: {x: 0.6761919, y: 2.05372, z: -0.02444698}
+    m_Value: {x: 96.54934, y: 12.087302, z: -101.49884}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -473,13 +473,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.038987394, y: 0.7836314, z: -0.04943426, w: 0.6180293}
+    m_Target: {x: 0.013803388, y: 0.753421, z: -0.015824141, w: 0.6572053}
     speed: 2
-    m_Value: {x: 0.038987353, y: 0.78363055, z: -0.049434207, w: 0.61802864}
+    m_Value: {x: 0.013803368, y: 0.75341994, z: -0.015824119, w: 0.65720433}
   m_Size:
-    m_Target: 4.266382
+    m_Target: 80.23314
     speed: 2
-    m_Value: 4.266382
+    m_Value: 80.23314
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -658,9 +658,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b2420000
-      m_LastClickedID: 17074
-      m_ExpandedIDs: e8c0fdff2af2fdffaea2feff76a4feff5cd9ffff8ad9ffff74fbffffaa420000b8420000d8420000ec420000064300002a430000
+      m_SelectedIDs: 7ca20000
+      m_LastClickedID: 41596
+      m_ExpandedIDs: 1471feff5671feffec71fefff671feff76fbffff6c3200008c320000e6320000f0320000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -749,20 +749,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Thaleah_PixelFont
+    - Assets/prefabs/Bomb
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Thaleah_PixelFont
+  - Assets/prefabs/Bomb
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\yonie\Covid Slicer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ded20000
-    m_LastClickedID: 53982
-    m_ExpandedIDs: 00000000142d0000f22d0000122f000010300000ac300000d4300000f8b00000
+    m_SelectedIDs: fc300000
+    m_LastClickedID: 12540
+    m_ExpandedIDs: 00000000122d0000f42d00001e2f000022300000be300000ea30000026350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -790,7 +790,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000142d0000f22d0000122f000010300000ac300000d4300000f8b00000
+    m_ExpandedIDs: 00000000122d0000f42d00001e2f000022300000be300000ea30000026350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -23,7 +23,7 @@ public class FruitManager : MonoBehaviour
         if(timer>= timeToEject)
         {
             timer = 0;
-            timeToEject = UnityEngine.Random.Range(1, 2);
+            timeToEject = UnityEngine.Random.Range(2, 3);
             LaunchFruits();
         }
     }

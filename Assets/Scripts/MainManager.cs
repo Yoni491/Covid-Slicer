@@ -24,8 +24,8 @@ public class MainManager : MonoBehaviour
         {
              LoseGame();
         }
-        else
-            s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
+        //else
+            //s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
     }
     static void LoseGame()
     {
