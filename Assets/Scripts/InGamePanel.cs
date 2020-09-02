@@ -6,21 +6,20 @@ using UnityEngine.UI;
 
 public class InGamePanel : MonoBehaviour
 {
-    [SerializeField] Text ScoreText = null;
-    [SerializeField] Text StreakText = null;
-    [SerializeField] Text ComboText = null;
-    [SerializeField] GameObject ComboPanel = null;
+    [SerializeField] Text m_ScoreText = null;
+    [SerializeField] Text m_StreakText = null;
+    [SerializeField] Text m_ComboText = null;
+    [SerializeField] GameObject m_ComboPanel = null;
     static Text s_ScoreText;
     static Text s_StreakText;
     static Text s_ComboText;
     static GameObject s_ComboPanel;
-    public static int score;
-    public static int streak;
-    public static int combo;
-    static float timer;
-    static float lastFruitSliceTime;
-    static int comboStreak;
-    static bool b_resetCombo;
+    public static int m_Score;
+    public static int m_Streak;
+    public static int m_Combo;
+    static float s_Timer;
+    static float s_LastFruitSliceTime;
+    static int s_ComboStreak;
 
      public void ReturnToMainMenu()
      {
@@ -29,21 +28,21 @@ public class InGamePanel : MonoBehaviour
 
      private void Start()
      {
-          s_ScoreText = ScoreText;
-          s_StreakText = StreakText;
-          s_ComboText = ComboText;
-          s_ComboPanel = ComboPanel;
+          s_ScoreText = m_ScoreText;
+          s_StreakText = m_StreakText;
+          s_ComboText = m_ComboText;
+          s_ComboPanel = m_ComboPanel;
      }
 
      private void Update()
      {
-          timer += Time.deltaTime;
+          s_Timer += Time.deltaTime;
      }
 
      public static void updateScore(int scoreToAdd)
      {
-          score += scoreToAdd;
-          s_ScoreText.text = "Score: " + score.ToString();
+          m_Score += scoreToAdd;
+          s_ScoreText.text = "Score: " + m_Score.ToString();
           updateStreak(1);
      }
 
@@ -51,15 +50,15 @@ public class InGamePanel : MonoBehaviour
      {
           if(streakToAdd == 0)
           {
-               streak = 0;
+               m_Streak = 0;
           }
 
           else
           {
-               streak += streakToAdd;
+               m_Streak += streakToAdd;
           }
 
-          s_StreakText.text = "Streak: " + streak.ToString();
+          s_StreakText.text = "Streak: " + m_Streak.ToString();
      }
 
      public static void addCombo(int comboToAdd)
@@ -71,41 +70,40 @@ public class InGamePanel : MonoBehaviour
 
           else
           {
-               if(timer - lastFruitSliceTime < 0.35f || lastFruitSliceTime == 0)
+               if(s_Timer - s_LastFruitSliceTime < 0.25f || s_LastFruitSliceTime == 0)
                {
-                    lastFruitSliceTime = timer;
-                    comboStreak++;
+                    s_LastFruitSliceTime = s_Timer;
+                    s_ComboStreak++;
                }
 
                else
                {
-                    if(comboStreak <= 1)
+                    if(s_ComboStreak <= 1)
                     {
                          resetCombo();
                     }
 
-                    lastFruitSliceTime = timer;
-                    comboStreak = 1;
+                    s_LastFruitSliceTime = s_Timer;
+                    s_ComboStreak = 1;
 
                }
 
-               combo += comboToAdd;
-               if(combo > 1)
+               m_Combo += comboToAdd;
+               if(m_Combo > 1)
                {
                     s_ComboPanel.SetActive(true);
                }
 
-               s_ComboText.text = combo.ToString();
+               s_ComboText.text = m_Combo.ToString();
           }
      }
 
      public static void resetCombo()
-    {
-        updateScore(combo*((combo/10) >2? combo / 10 : 2));
-        lastFruitSliceTime = 0;
-        timer = 0;
-        combo = 0;
-        s_ComboPanel.SetActive(false);
-        b_resetCombo = false;
-    }
+     {
+          updateScore(m_Combo * (m_Combo / 10 > 2 ? m_Combo / 10 : 2));
+          s_LastFruitSliceTime = 0;
+          s_Timer = 0;
+          m_Combo = 0;
+          s_ComboPanel.SetActive(false);
+     }
 }

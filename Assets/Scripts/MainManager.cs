@@ -6,16 +6,15 @@ using UnityEngine.SceneManagement;
 public class MainManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] hearts = null;
-    [SerializeField]
-    private int life = 0;
+    GameObject[] m_Hearts = null;
+    [SerializeField] int m_Life = 0;
     static int s_Life;
     static GameObject[] s_hearts;
 
      private void Start()
      {
-          s_hearts = hearts;
-          s_Life = life;
+          s_hearts = m_Hearts;
+          s_Life = m_Life;
      }
 
      public static void LoseLife(int Amount)
@@ -36,8 +35,9 @@ public class MainManager : MonoBehaviour
 
      static void LoseGame()
      {
-          PanelManager.playerLost = true;
-          ScoreScript.AddScore(InGamePanel.score);
+          PanelManager.b_PlayerLost = true;
+          InGamePanel.resetCombo();
+          ScoreScript.AddScore(InGamePanel.m_Score);
           SceneManager.LoadScene("MainMenu");
      }
 }

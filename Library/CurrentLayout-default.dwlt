@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 1903
     height: 931
-  m_MinSize: {x: 917, y: 444}
+  m_MinSize: {x: 917, y: 422}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 15782
+  controlID: 138
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 0
     width: 831
     height: 931
-  m_MinSize: {x: 202, y: 444}
-  m_MaxSize: {x: 4002, y: 8044}
+  m_MinSize: {x: 202, y: 422}
+  m_MaxSize: {x: 4002, y: 8022}
   vertical: 1
-  controlID: 15852
+  controlID: 139
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,10 +217,10 @@ MonoBehaviour:
     y: 0
     width: 561
     height: 931
-  m_MinSize: {x: 204, y: 322}
-  m_MaxSize: {x: 4004, y: 8022}
+  m_MinSize: {x: 204, y: 344}
+  m_MaxSize: {x: 4004, y: 8044}
   vertical: 1
-  controlID: 15874
+  controlID: 162
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 620
     width: 561
     height: 311
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 122}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -442,9 +442,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -11.797609, y: -5.603021, z: 88.32541}
+    m_Target: {x: -4.626911, y: 25.58103, z: 92.51128}
     speed: 2
-    m_Value: {x: -11.797609, y: -5.603021, z: 88.32541}
+    m_Value: {x: -4.626911, y: 25.58103, z: 92.51128}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -473,13 +473,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.026830684, y: -0.110731706, z: 0.0029902954, w: 0.993486}
+    m_Target: {x: -0.047950547, y: -0.035950426, z: -0.0017271797, w: 0.99820316}
     speed: 2
-    m_Value: {x: 0.026830621, y: -0.110731445, z: 0.0029902882, w: 0.9934836}
+    m_Value: {x: 0.047950547, y: 0.035950422, z: 0.0017271796, w: -0.9982031}
   m_Size:
-    m_Target: 147.39404
+    m_Target: 57.940357
     speed: 2
-    m_Value: 147.39404
+    m_Value: 57.940357
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -658,9 +658,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a6a80000
-      m_LastClickedID: 43174
-      m_ExpandedIDs: 6ef0feffda25ffff5073ffff6a86fffffe8bffff3696ffff4ebeffff26c3ffffbc3e0000164c0000284c0000564c0000764c00008ea80000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 82f9ffffc4f9ffff7afaffff7efaffff76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -749,11 +749,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\Oren\\Desktop\\Project\\\u05E4\u05D9\u05EA\u05D5\u05D7
     \u05D1\u05DE\u05E6\u05D9\u05D0\u05D5\u05EA \u05DE\u05D3\u05D5\u05DE\u05D4\\Covid-Slicer"
@@ -761,9 +761,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 463d0000
-    m_LastClickedID: 15686
-    m_ExpandedIDs: 00000000863a0000323b0000a63c0000b63c0000143d00003e3d0000ae40000000ca9a3b
+    m_SelectedIDs: 3c310000
+    m_LastClickedID: 12604
+    m_ExpandedIDs: 00000000122d0000f42d0000c6300000f23000001a310000c633000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,7 +791,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000863a0000323b0000a63c0000b63c0000143d00003e3d0000ae40000000ca9a3b
+    m_ExpandedIDs: 00000000122d0000f42d0000c6300000f23000001a310000c6330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 9a3200009e320000963200009c320000a0320000ca2d0000e42d0000922e0000802e000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

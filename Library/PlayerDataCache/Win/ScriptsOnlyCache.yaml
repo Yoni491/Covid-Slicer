@@ -23,7 +23,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -33,7 +32,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
-    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/Fruit Ninja.unity:
     - Class: 1
@@ -153,8 +151,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
@@ -172,7 +168,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 10694}
+      Script: {instanceID: 10814}
     - Class: 114
       Script: {instanceID: 10818}
     - Class: 114
@@ -316,7 +312,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: be5499d09d094c324d7e7dd48dd05c56
+      Hash: f1c28857d24fbfdd91a8a0467b9cb7f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FruitScript
@@ -376,7 +372,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 5ab8e26784d5cf65855559476980d78c
+      Hash: e1788868e442b55b0e29ad5005560f1b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InGamePanel
@@ -400,7 +396,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: c5f1dfcf33c1ca86775f20f9bc4b3c30
+      Hash: 8ae8f17ed5a72c912a859b78dee1874f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PanelManager
@@ -526,7 +522,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: aa7f35d70ce18f19643c387d6686fa84
+      Hash: 71b0f96b1554bcf16a1ee8895f7a619c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainManager
@@ -556,7 +552,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: e67abc08da5d3aecaca7b711bce51052
+      Hash: e4c74e40cd9ffee8bfff535415f2ef17
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -586,7 +582,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 045c4195d802664845be1edbcd15698c
+      Hash: 4b3f9746f328502b1472ce6a97c7e1a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreScript
@@ -658,7 +654,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 33b7a2a6bd03adfe19fceef257dfd097
+      Hash: 64a46d54ce69ecc3e158ad421cde4b4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FruitManager
@@ -678,5 +674,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Fruit Ninja.unity
-  playerPath: "C:/Users/yonie/Desktop/\u05E4\u05D9\u05EA\u05D5\u05D7 \u05DE\u05E6\u05D9\u05D0\u05D5\u05EA
-    \u05DE\u05D3\u05D5\u05DE\u05D4/fruit ninja/Covid Slicer.exe"
+  playerPath: C:/Users/Oren/Desktop/New folder/Covid Slicer.exe

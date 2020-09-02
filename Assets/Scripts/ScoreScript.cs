@@ -6,56 +6,55 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-     [SerializeField] Text Scores = null;
-     [SerializeField] Text Dates = null;
+     [SerializeField] Text m_Scores = null;
+     [SerializeField] Text m_Dates = null;
      static Text s_Score;
      static Text s_Date;
-     static int MaxScores = 10;
-     static int ScoresAmount = 0;
-     static PlayerScore[] currentScores = new PlayerScore[MaxScores];
+     static int m_MaxScores = 10;
+     static int m_ScoresAmount = 0;
+     static PlayerScore[] m_CurrentScores = new PlayerScore[m_MaxScores];
 
      private void Start()
      {
-
-          s_Score = Scores;
-          s_Date = Dates;
+          s_Score = m_Scores;
+          s_Date = m_Dates;
      }
 
      public static void AddScore(int i_Score)
      {
-          PlayerScore NewScore = new PlayerScore(i_Score);
+          PlayerScore newScore = new PlayerScore(i_Score);
 
-          for(int i = 0; i < MaxScores; i++)
+          for(int i = 0; i < m_MaxScores; i++)
           {
-               if(i >= ScoresAmount)
+               if(i >= m_ScoresAmount)
                {
-                    currentScores[i] = NewScore;
-                    ScoresAmount++;
+                    m_CurrentScores[i] = newScore;
+                    m_ScoresAmount++;
                     break;
                }
 
-               if(i_Score > currentScores[i].m_Score)
+               if(i_Score > m_CurrentScores[i].m_Score)
                {
-                    PlayerScore temp = currentScores[i];
-                    currentScores[i] = NewScore;
-                    NewScore = temp;
+                    PlayerScore temp = m_CurrentScores[i];
+                    m_CurrentScores[i] = newScore;
+                    newScore = temp;
                }
           }
      }
 
      public static void UpdateLeaderboard()
      {
-          string LeaderboardScore = "";
-          string LeaderboardDate = "";
+          string leaderboardScore = "";
+          string leaderboardDate = "";
 
-          for(int i = 0; i < ScoresAmount; i++)
+          for(int i = 0; i < m_ScoresAmount; i++)
           {
-               LeaderboardScore += (i + 1) + ". " + currentScores[i].m_Score + "\n";
-               LeaderboardDate += currentScores[i].ScoreDate + "\n";
+               leaderboardScore += (i + 1) + ". " + m_CurrentScores[i].m_Score + "\n";
+               leaderboardDate += m_CurrentScores[i].ScoreDate + "\n";
           }
 
-          s_Score.text = LeaderboardScore;
-          s_Date.text = LeaderboardDate;
+          s_Score.text = leaderboardScore;
+          s_Date.text = leaderboardDate;
      }
 }
 
@@ -67,7 +66,7 @@ public class PlayerScore
      public PlayerScore(int Score)
      {
           m_Score = Score;
-          m_ScoreDate = System.DateTime.Today.ToShortDateString();
+          m_ScoreDate =  System.DateTime.Now.ToString();
      }
 
     public string ScoreDate { get => m_ScoreDate; set => m_ScoreDate = value; }

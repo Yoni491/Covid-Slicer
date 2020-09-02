@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class BombScript : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-    private new AudioSource audio;
-    // Start is called before the first frame update
+    [SerializeField] Animator animator = null;
+    private AudioSource audio;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.y < -5)

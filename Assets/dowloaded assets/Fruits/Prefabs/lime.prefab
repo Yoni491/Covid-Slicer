@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02cf7d22a6257949a8cf83c0f7a6598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitHalf1: {fileID: 244730973}
-  fruitHalf2: {fileID: 513001617}
+  m_FruitHalf1: {fileID: 244730973}
+  m_FruitHalf2: {fileID: 513001617}
 --- !u!82 &5863322690604042535
 AudioSource:
   m_ObjectHideFlags: 0

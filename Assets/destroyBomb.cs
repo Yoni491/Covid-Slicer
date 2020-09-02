@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class destroyBomb : StateMachineBehaviour
 {
-
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Destroy(animator.gameObject, stateInfo.length);

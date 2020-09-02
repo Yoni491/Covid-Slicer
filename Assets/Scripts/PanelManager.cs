@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class PanelManager : MonoBehaviour
 {
-     [SerializeField] GameObject HowToPopUp = null;
-     [SerializeField] GameObject ScoreboardPopUp = null;
-     [SerializeField] GameObject LostPopUp = null;
-     [SerializeField] Text LostPopUpText = null;
-     public static bool playerLost;
+     [SerializeField] GameObject m_HowToPopUp = null;
+     [SerializeField] GameObject m_ScoreboardPopUp = null;
+     [SerializeField] GameObject m_LostPopUp = null;
+     [SerializeField] Text m_LostPopUpText = null;
+     public static bool b_PlayerLost;
 
      public void startGame()
      {
@@ -21,22 +21,22 @@ public class PanelManager : MonoBehaviour
      public void showScores()
      {
           ScoreScript.UpdateLeaderboard();
-          ScoreboardPopUp.SetActive(true);
+          m_ScoreboardPopUp.SetActive(true);
      }
 
      public void HowToPlay()
      {
-          HowToPopUp.SetActive(true);
+          m_HowToPopUp.SetActive(true);
      }
 
      public void CloseHowToPlay()
      {
-          HowToPopUp.SetActive(false);
+          m_HowToPopUp.SetActive(false);
      }
 
      public void CloseScoreboard()
      {
-          ScoreboardPopUp.SetActive(false);
+          m_ScoreboardPopUp.SetActive(false);
           SceneManager.LoadScene("MainMenu");
      }
 
@@ -47,11 +47,12 @@ public class PanelManager : MonoBehaviour
 
      private void OnEnable()
      {
-          if(playerLost)
+          if(b_PlayerLost)
           {
-               LostPopUpText.text = "Your score is: " + InGamePanel.score.ToString();
-               LostPopUp.SetActive(true);
-               playerLost = false;
+               m_LostPopUpText.text = "Your score is: " + InGamePanel.m_Score.ToString();
+               m_LostPopUp.SetActive(true);
+               b_PlayerLost = false;
+               InGamePanel.m_Score = 0;
           }
      }
 }
