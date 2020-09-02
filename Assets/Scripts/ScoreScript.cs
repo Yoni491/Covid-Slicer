@@ -14,31 +14,33 @@ public class ScoreScript : MonoBehaviour
      static int ScoresAmount = 0;
      static PlayerScore[] currentScores = new PlayerScore[MaxScores];
 
-    private void Start()
-    {
-        s_Score = Scores;
-        s_Date = Dates;
-    }
-
-     public static void AddScore(int i_Score) // ADD NEW SCORE TO LEADERBOARDS
+     private void Start()
      {
-        PlayerScore NewScore = new PlayerScore(i_Score);
-        for (int i = 0; i < MaxScores; i++)
-        {
-            if (i >= ScoresAmount)
-            {
-                currentScores[i] = NewScore;
-                ScoresAmount++;
-                break;
-            }
 
-            if (i_Score > currentScores[i].m_Score)
-            {
-                PlayerScore temp = currentScores[i];
-                currentScores[i] = NewScore;
-                NewScore = temp;
-            }
-        }
+          s_Score = Scores;
+          s_Date = Dates;
+     }
+
+     public static void AddScore(int i_Score)
+     {
+          PlayerScore NewScore = new PlayerScore(i_Score);
+
+          for(int i = 0; i < MaxScores; i++)
+          {
+               if(i >= ScoresAmount)
+               {
+                    currentScores[i] = NewScore;
+                    ScoresAmount++;
+                    break;
+               }
+
+               if(i_Score > currentScores[i].m_Score)
+               {
+                    PlayerScore temp = currentScores[i];
+                    currentScores[i] = NewScore;
+                    NewScore = temp;
+               }
+          }
      }
 
      public static void UpdateLeaderboard()
@@ -56,6 +58,7 @@ public class ScoreScript : MonoBehaviour
           s_Date.text = LeaderboardDate;
      }
 }
+
 public class PlayerScore
 {
      public int m_Score;

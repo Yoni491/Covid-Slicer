@@ -14,78 +14,92 @@ public class InGamePanel : MonoBehaviour
     static Text s_StreakText;
     static Text s_ComboText;
     static GameObject s_ComboPanel;
-    public static int score =0;
-    public static int streak = 0;
+    public static int score;
+    public static int streak;
+    public static int combo;
+    static float timer;
+    static float lastFruitSliceTime;
+    static int comboStreak;
+    static bool b_resetCombo;
 
-    public static int combo = 0;
-    static float timer = 0;
-    static float lastFruitSliceTime =0;
-    static int comboStreak = 0;
-    static bool b_resetCombo=false;
-    public void ReturnToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+     public void ReturnToMainMenu()
+     {
+          SceneManager.LoadScene("MainMenu");
+     }
 
-    private void Start()
-    {
-        s_ScoreText = ScoreText;
-        s_StreakText = StreakText;
-        s_ComboText = ComboText;
-        s_ComboPanel = ComboPanel;
-    }
-    private void Update()
-    {
-        timer += Time.deltaTime;
-    }
-    public static void updateScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        s_ScoreText.text = "Score: " + score.ToString();
-        updateStreak(1);
-    }
-    public static void updateStreak(int streakToAdd)
-    {
-        if(streakToAdd==0)
-        {
-            streak = 0;
-        }
-        else
-        {
-            streak += streakToAdd;
-        }
-        s_StreakText.text = "Streak: " + streak.ToString();
-    }
-    public static void addCombo(int comboToAdd)
-    {
-        if (comboToAdd == 0)
-        {
-            resetCombo();
-        }
-        else
-        {
-            if (timer - lastFruitSliceTime < 0.35f || lastFruitSliceTime == 0)
-            {
-                lastFruitSliceTime = timer;
-                comboStreak++;
-            }
-            else
-            {
-                if(comboStreak<=1)
-                {
-                    resetCombo();
-                }
-                lastFruitSliceTime = timer;
-                comboStreak = 1;
-                
-            }
-            combo += comboToAdd;
-            if(combo>1)
-                s_ComboPanel.SetActive(true);
-            s_ComboText.text = combo.ToString();
-        }
-    }
-    public static void resetCombo()
+     private void Start()
+     {
+          s_ScoreText = ScoreText;
+          s_StreakText = StreakText;
+          s_ComboText = ComboText;
+          s_ComboPanel = ComboPanel;
+     }
+
+     private void Update()
+     {
+          timer += Time.deltaTime;
+     }
+
+     public static void updateScore(int scoreToAdd)
+     {
+          score += scoreToAdd;
+          s_ScoreText.text = "Score: " + score.ToString();
+          updateStreak(1);
+     }
+
+     public static void updateStreak(int streakToAdd)
+     {
+          if(streakToAdd == 0)
+          {
+               streak = 0;
+          }
+
+          else
+          {
+               streak += streakToAdd;
+          }
+
+          s_StreakText.text = "Streak: " + streak.ToString();
+     }
+
+     public static void addCombo(int comboToAdd)
+     {
+          if(comboToAdd == 0)
+          {
+               resetCombo();
+          }
+
+          else
+          {
+               if(timer - lastFruitSliceTime < 0.35f || lastFruitSliceTime == 0)
+               {
+                    lastFruitSliceTime = timer;
+                    comboStreak++;
+               }
+
+               else
+               {
+                    if(comboStreak <= 1)
+                    {
+                         resetCombo();
+                    }
+
+                    lastFruitSliceTime = timer;
+                    comboStreak = 1;
+
+               }
+
+               combo += comboToAdd;
+               if(combo > 1)
+               {
+                    s_ComboPanel.SetActive(true);
+               }
+
+               s_ComboText.text = combo.ToString();
+          }
+     }
+
+     public static void resetCombo()
     {
         updateScore(combo*((combo/10) >2? combo / 10 : 2));
         lastFruitSliceTime = 0;

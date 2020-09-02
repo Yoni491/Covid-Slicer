@@ -11,26 +11,34 @@ public class MainManager : MonoBehaviour
     private int life = 0;
     static int s_Life;
     static GameObject[] s_hearts;
-    private void Start()
-    {
-        s_hearts = hearts;
-        s_Life = life;
-    }
-    public static void LoseLife(int Amount)
-    {
-        s_Life -= Amount;
-        InGamePanel.updateStreak(0);
-        if (s_Life <= 0)
-        {
-             LoseGame();
-        }
-        //else
-            //s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
-    }
-    static void LoseGame()
-    {
-         ScoreScript.AddScore(InGamePanel.score);
-         SceneManager.LoadScene("MainMenu");
-    }
+
+     private void Start()
+     {
+          s_hearts = hearts;
+          s_Life = life;
+     }
+
+     public static void LoseLife(int Amount)
+     {
+          s_Life -= Amount;
+          InGamePanel.updateStreak(0);
+          if(s_Life <= 0)
+          {
+               LoseGame();
+          }
+
+          else
+          {
+               s_hearts[s_Life].GetComponent<MeshRenderer>().enabled = false;
+          }
+
+     }
+
+     static void LoseGame()
+     {
+          PanelManager.playerLost = true;
+          ScoreScript.AddScore(InGamePanel.score);
+          SceneManager.LoadScene("MainMenu");
+     }
 }
 
